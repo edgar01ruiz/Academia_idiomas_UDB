@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background-color: rgb(230, 229, 229);
+}
+
+.container>* {
+    box-shadow: -1px 1px 7px 0px rgb(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+.header {
+    grid-area: header;
+    background-color: rgb(110, 114, 114);
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: rgb(159, 255, 223);
+
+}
+
+.content {
+    grid-area: content;
+    background-color: rgb(255, 255, 255);
+    margin-top: 10px;
+}
+
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(110, 114, 114);
+    margin-top: 25px;
+}
+
+.main-nav {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-right: 20px;
+    font-size: 11px;
+    margin-top: 15px;
+}
+
+.main-nav li:hover {
+    background-color: #b1efff;
+    padding: 2px;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.push {
+    margin-left: auto;
+}
+
+/*Diseño movil*/
+.container {
+    display: grid;
+    grid-template:
+        "header" 110px
+        "nav" 60px
+        "content" auto
+        "footer" 120px
+    ;
+}
+
+.container header span {
+    font-size: 20px;
+}
+
+.content .title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.content .first-parrafo {
+    text-align: justify;
+    padding: 30px 30px 20px 30px;
+}
+
+.content .second-parrafo {
+    text-align: justify;
+    padding: 5px 30px 20px 30px;
+}
+
+/*Diseño para tablets*/
+@media (min-width: 768px) {
+    .container {
+        grid-template:
+            /*Alto*/
+            "header header" 110px
+            "nav nav" 60px
+            "content content" auto
+            "footer footer" 110px
+            /*Ancho*/
+            /
+            200px auto
+        ;
+    }
+
+    .container header span {
+        font-size: 20px;
+    }
+
+    .main-nav li {
+        margin-right: 20px;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .content .title {
+        font-weight: bold;
+        font-size: 40px;
+    }
+}
+
+/*Diseño desktop*/
+@media (min-width: 900px) {
+    .container {
+        grid-template:
+            /*Alto*/
+            "header header" 110px
+            "nav nav" 60px
+            "content content" auto
+            "footer footer" 110px
+            /*Ancho*/
+            /
+            200px auto;
+    }
+
+    .container header span {
+
+        font-size: 20px;
+    }
+
+    .main-nav li {
+        margin-right: 20px;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .content .title {
+        font-weight: bold;
+        font-size: 40px;
+    }
+}
